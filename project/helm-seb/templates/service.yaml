@@ -3,8 +3,8 @@ kind: Service
 metadata:
   labels:
     app: nginx
-    tag: {{ .Values.image.tag }}
-  name: nginx-{{ .Values.image.tag }}
+    tag: alpine
+  name: nginx-alpine
   namespace: {{ .Values.namespace.name }}
 spec:
   ports:
@@ -13,5 +13,5 @@ spec:
     targetPort: {{ .Values.namespace.servicePort }}
   selector:
     app: nginx
-    tag: {{ .Values.image.tag }}
+    tag: alpine
   type: {{ .Values.namespace.serviceType }}
