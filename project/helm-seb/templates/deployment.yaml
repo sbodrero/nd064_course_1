@@ -11,7 +11,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-      tag: alpinr
+      tag: alpine
   strategy:
     rollingUpdate:
       maxSurge: 25%
