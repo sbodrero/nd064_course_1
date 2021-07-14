@@ -8,10 +8,10 @@ metadata:
   namespace: {{ .Values.namespace.name }}
 spec:
   ports:
-  - port: {{ .Values.namespace.servicePort }}
+  - port: {{ .Values.namespace.service.port }}
     protocol: TCP
-    targetPort: {{ .Values.namespace.servicePort }}
+    targetPort: {{ .Values.namespace.service.port }}
   selector:
     app: nginx
     tag: alpine
-  type: {{ .Values.namespace.serviceType }}
+  type: {{ .Values.namespace.service.type }}

@@ -5,6 +5,10 @@ image:
   tag: 1.18.0
 
 replicaCount: 1
+
 resources:
   requests:
-    memory: "128Mi"
+    memory: 128Mi
+
+configmap:
+  data: "version: 1.18.0"
