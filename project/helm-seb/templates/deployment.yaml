@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: nginx
-    tag: {{ .Values.image.tag }}
+    tag: alpine
   name: nginx-alpine
   namespace: {{ .Values.namespace.name }} 
 spec:
